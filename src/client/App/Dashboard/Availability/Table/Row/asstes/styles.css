@@ -23,3 +23,11 @@
 .row:hover .hoursCell .edit {
     opacity: 1;
 }
+
+.rowEditing:hover .hoursCell .edit {
+    opacity: 0;
+}
+
+.rowEditing .hoursCell  {
+    cursor: default;
+}
