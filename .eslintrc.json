@@ -10,6 +10,7 @@
 		"comma-dangle": "off",
 		"react/jsx-filename-extension": "off",
 		"react/destructuring-assignment": "never",
-		"react/jsx-indent": [4, "tab"]
+		"react/jsx-indent": [4, "tab"],
+		"sort-keys": ["error", "asc", {"caseSensitive": true, "natural": false}]
 	}
 }
