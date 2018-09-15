@@ -9,8 +9,13 @@ const Layout = props => (
 			<Menu.Item as={NavLink} to="/" exact>
 				Main
 			</Menu.Item>
+
 			<Menu.Item as={NavLink} to="/auth">
 				Auth
+			</Menu.Item>
+
+			<Menu.Item as={NavLink} to="/dashboard/availability">
+				Dashboard
 			</Menu.Item>
 		</Menu>
 		{props.children}
