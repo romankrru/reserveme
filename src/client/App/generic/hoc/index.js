@@ -1,0 +1,1 @@
+export {default as withOnClickOutside} from './with-on-click-outside';
