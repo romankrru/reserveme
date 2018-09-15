@@ -12,6 +12,7 @@
 		"react/destructuring-assignment": "never",
 		"react/jsx-indent": [4, "tab"],
 		"sort-keys": ["error", "asc", {"caseSensitive": true, "natural": false}],
-		"react/jsx-one-expression-per-line": "none"
+		"react/jsx-one-expression-per-line": "none",
+		"react/prop-types": "never"
 	}
 }
