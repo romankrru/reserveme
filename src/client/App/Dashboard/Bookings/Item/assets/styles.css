@@ -1,0 +1,15 @@
+.item {
+    position: relative;
+}
+
+.canceled p {
+    text-decoration: line-through;
+}
+
+.actions {
+    margin-top: 10px !important;
+}
+
+.actions i {
+    margin: 0 !important;
+}
