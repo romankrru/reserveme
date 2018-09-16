@@ -22,6 +22,7 @@ const withOnClickOutside = params =>
 
 			componentWillUnmount() {
 				document.removeEventListener('click', handler);
+				handler = null;
 			},
 		})
 	);
