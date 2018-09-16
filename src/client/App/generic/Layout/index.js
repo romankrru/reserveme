@@ -1,6 +1,7 @@
 import React from 'react';
 import {Menu} from 'semantic-ui-react';
 import {NavLink} from 'react-router-dom';
+import {pure} from 'recompose';
 import styles from './assets/styles.css';
 
 const Layout = props => (
@@ -22,4 +23,4 @@ const Layout = props => (
 	</div>
 );
 
-export default Layout;
+export default pure(Layout);

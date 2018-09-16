@@ -1,4 +1,5 @@
 import React from 'react';
+import {pure} from 'recompose';
 import {Button, Icon, Table} from 'semantic-ui-react';
 
 const Footer = () => (
@@ -18,4 +19,4 @@ const Footer = () => (
 	</Table.Footer>
 );
 
-export default Footer;
+export default pure(Footer);

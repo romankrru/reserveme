@@ -1,4 +1,5 @@
 import React from 'react';
+import {pure} from 'recompose';
 import {Table} from 'semantic-ui-react';
 
 const Header = () => (
@@ -11,4 +12,4 @@ const Header = () => (
 	</Table.Header>
 );
 
-export default Header;
+export default pure(Header);
