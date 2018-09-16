@@ -1,5 +1,5 @@
 import React from 'react';
-import {Segment, Item as ItemUI, Label} from 'semantic-ui-react';
+import {Segment, Item as ItemUI} from 'semantic-ui-react';
 import Item from './Item';
 
 const data = [
