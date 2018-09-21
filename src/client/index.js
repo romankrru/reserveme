@@ -1,3 +1,4 @@
+// @flow
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {ApolloClient} from 'apollo-client';
@@ -39,4 +40,8 @@ const app = (
 	</ApolloProvider>
 );
 
-ReactDOM.render(app, document.getElementById('root'));
+const root = document.getElementById('root');
+
+if (root) {
+	ReactDOM.render(app, root);
+}
