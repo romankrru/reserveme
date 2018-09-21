@@ -1,7 +1,22 @@
+// @flow
 import React from 'react';
 import {Message, Form} from 'semantic-ui-react';
 
-const Input = props => (
+const Input = (props: {
+	isErrorShown?: boolean,
+	id: string,
+	label: string,
+	type: string,
+	name: string,
+	placeholder?: string,
+	value: string | number,
+	onChange: (e: Event) => any,
+
+	errorMessage: {
+		header: string,
+		content: string,
+	},
+}) => (
 	<Form.Field error={props.isErrorShown}>
 		<label htmlFor={props.id}>
 			{props.label}
