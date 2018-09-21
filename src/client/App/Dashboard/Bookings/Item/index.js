@@ -17,14 +17,17 @@ const BookingItem = props => (
 			)}
 
 			<Item.Header>Booked by {props.data.bookedBy.firstName}</Item.Header>
+
 			<Item.Meta>
 				<p>
 					<b>{props.data.startTime}</b>
 				</p>
+
 				<p>
 					<b>Duration {props.data.duration}</b>
 				</p>
 			</Item.Meta>
+
 			<Item.Description>Booking made on 15.09.18 19:52</Item.Description>
 
 			<Button.Group color="teal" className={styles.actions}>
