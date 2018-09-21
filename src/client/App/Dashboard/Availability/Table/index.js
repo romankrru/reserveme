@@ -1,10 +1,10 @@
 import React from 'react';
-import {Table, Ref} from 'semantic-ui-react';
-import {compose, withStateHandlers, withState} from 'recompose';
-import {withOnClickOutside} from '../../../generic/hoc';
+import {Table} from 'semantic-ui-react';
+import {compose, withStateHandlers} from 'recompose';
 import Header from './Header';
 import Footer from './Footer';
 import Row from './Row';
+import OnClickOutside from '../../../generic/OnClickOutside';
 
 const days = [
 	{title: 'Monday', value: 'MON'},
@@ -17,10 +17,10 @@ const days = [
 ];
 
 const AvailabilityTable = props => (
-	<Ref innerRef={props.setDomRef}>
-		<Table compact celled definition>
-			<Header />
+	<Table compact celled definition>
+		<Header />
 
+		<OnClickOutside onClickOutside={props.stopEditing}>
 			<Table.Body>
 				{days.map(day => (
 					<Row
@@ -31,10 +31,10 @@ const AvailabilityTable = props => (
 					/>
 				))}
 			</Table.Body>
+		</OnClickOutside>
 
-			<Footer />
-		</Table>
-	</Ref>
+		<Footer />
+	</Table>
 );
 
 export default compose(
@@ -47,12 +47,5 @@ export default compose(
 			startEditing: () => () => ({isEditing: true}),
 			stopEditing: () => () => ({isEditing: false}),
 		}
-	),
-
-	withState('domRef', 'setDomRef', null),
-
-	withOnClickOutside(props => ({
-		domRef: props.domRef,
-		handler: props.stopEditing,
-	}))
+	)
 )(AvailabilityTable);
