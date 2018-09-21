@@ -20,6 +20,7 @@ const Layout = (props: {children: React.Node}) => (
 				Dashboard
 			</Menu.Item>
 		</Menu>
+
 		{props.children}
 	</div>
 );
