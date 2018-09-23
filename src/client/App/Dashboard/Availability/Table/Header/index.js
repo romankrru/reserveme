@@ -1,3 +1,4 @@
+// @flow
 import React from 'react';
 import {pure} from 'recompose';
 import {Table} from 'semantic-ui-react';

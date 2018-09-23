@@ -1,3 +1,4 @@
+// @flow
 import React from 'react';
 import {pure} from 'recompose';
 import {Button, Icon, Table} from 'semantic-ui-react';

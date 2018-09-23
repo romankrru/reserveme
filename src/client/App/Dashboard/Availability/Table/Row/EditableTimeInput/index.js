@@ -1,9 +1,10 @@
+// @flow
 import React from 'react';
 import MaskedInput from 'react-text-mask';
 import {branch, renderComponent} from 'recompose';
 import styles from './assets/styles.css';
 
-const EditableTimeInput = props => (
+const EditableTimeInput = (props: {value: string}) => (
 	<MaskedInput
 		className={styles.timeInput}
 		value={props.value}

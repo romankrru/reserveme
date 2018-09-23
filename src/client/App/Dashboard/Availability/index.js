@@ -1,3 +1,4 @@
+// @flow
 import React from 'react';
 import {Segment} from 'semantic-ui-react';
 import Table from './Table';
