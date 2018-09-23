@@ -1,10 +1,16 @@
 // @flow
 import React from 'react';
 import MaskedInput from 'react-text-mask';
-import {branch, renderComponent} from 'recompose';
+import {branch, compose, defaultProps, renderComponent} from 'recompose';
+import type {HOC} from 'recompose';
 import styles from './assets/styles.css';
 
-const EditableTimeInput = (props: {value: string}) => (
+type EditableTimeInputProps = {
+	value: string,
+	isEditing: boolean,
+};
+
+const EditableTimeInput = props => (
 	<MaskedInput
 		className={styles.timeInput}
 		value={props.value}
@@ -12,7 +18,9 @@ const EditableTimeInput = (props: {value: string}) => (
 	/>
 );
 
-export default branch(
-	props => !props.isEditing,
-	renderComponent(props => <span>{props.value}</span>)
-)(EditableTimeInput);
+const enhance: HOC<*, EditableTimeInputProps> = compose(
+	defaultProps({isEditing: false}),
+	branch(props => !props.isEditing, renderComponent(props => <span>{props.value}</span>))
+);
+
+export default enhance(EditableTimeInput);
