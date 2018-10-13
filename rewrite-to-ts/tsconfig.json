@@ -22,6 +22,8 @@
   "exclude": [
     "src/App/Auth",
     "src/App/Dashboard",
+    "src/App/generic/Input",
+    "src/App/generic/OnClickOutside",
     "node_modules",
     "build",
     "scripts",
