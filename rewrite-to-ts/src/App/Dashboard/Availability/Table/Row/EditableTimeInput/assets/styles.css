@@ -1,0 +1,8 @@
+.timeInput {
+    color: rgba(0,0,0,.87);
+    font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif;
+    border: 1px solid rgba(34,36,38,.15);
+    border-radius: .28571429rem;
+    width: 60px;
+    text-align: center;
+}
