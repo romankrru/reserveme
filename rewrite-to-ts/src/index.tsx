@@ -1,13 +1,15 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
+
 // import {ApolloClient} from 'apollo-client';
 // import {ApolloProvider} from 'react-apollo';
 // import {InMemoryCache} from 'apollo-cache-inmemory';
 // import {HttpLink} from 'apollo-link-http';
 // import {onError} from 'apollo-link-error';
 // import {ApolloLink} from 'apollo-link';
-// import {BrowserRouter} from 'react-router-dom';
-// import App from './App';
+
+import {BrowserRouter} from 'react-router-dom';
+import App from './App';
 
 // const client = new ApolloClient({
 // 	cache: new InMemoryCache(),
@@ -31,16 +33,13 @@ import * as ReactDOM from 'react-dom';
 // 	]),
 // });
 
-// const app = (
-// 	<ApolloProvider client={client}>
-// 		<BrowserRouter>
-// 			<App />
-// 		</BrowserRouter>
-// 	</ApolloProvider>
-// );
-
-const app = <div>Hello</div>;
+const app = (
+	// <ApolloProvider client={client}>
+		<BrowserRouter>
+			<App />
+		</BrowserRouter>
+	// </ApolloProvider>
+);
 
 const root = document.getElementById('root');
-
-if (root) ReactDOM.render(app, root);
+ReactDOM.render(app, root);
